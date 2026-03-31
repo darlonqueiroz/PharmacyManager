@@ -1,0 +1,4 @@
+-- Migration script to add a new column 'last_updated' to the 'users' table
+-- exemplifying the use of a timestamp that automatically updates whenever a record is modified.
+--ALTER TABLE users
+--ADD COLUMN last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
