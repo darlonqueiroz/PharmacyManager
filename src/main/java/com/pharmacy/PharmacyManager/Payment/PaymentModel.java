@@ -2,10 +2,7 @@ package com.pharmacy.PharmacyManager.Payment;
 
 import com.pharmacy.PharmacyManager.Client.ClientModel;
 import com.pharmacy.PharmacyManager.Product.ProductModel;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,5 +19,8 @@ public class PaymentModel {
     private ClientModel client;
     @OneToMany
     private List<ProductModel> product;
+    @Column (name = "total_price")
+    private int totalPrice;
+
 
 }

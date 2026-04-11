@@ -12,11 +12,13 @@ public class CategoryController {
     private CategoryService categoryService;
 
     public CategoryController(CategoryService categoryService) {
+
         this.categoryService = categoryService;
     }
 
     @GetMapping("/getcategory")
    public Iterator<CategoryModel> GetAllCategory(){
+
         return categoryService.getAllCategories();
     }
     @PostMapping("/postcategory")
