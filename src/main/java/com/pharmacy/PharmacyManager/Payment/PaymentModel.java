@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -20,7 +21,7 @@ public class PaymentModel {
     @OneToMany
     private List<ProductModel> product;
     @Column (name = "total_price")
-    private int totalPrice;
+    private BigDecimal totalPrice;
 
 
 }
