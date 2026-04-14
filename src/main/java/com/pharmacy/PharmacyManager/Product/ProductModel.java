@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,9 @@ public class ProductModel {
     @Column(name = "name_product")
     private String name;
     @Column (name = "price_product")
-    private int price;
+    private BigDecimal price;
+    @Column(name = "quantity_product")
+    private Integer quantity;
     @Column(name ="validity")
     private String validity;
     @Column(name ="description")
