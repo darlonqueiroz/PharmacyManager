@@ -1,4 +1,4 @@
-package com.pharmacy.PharmacyManager.cart;
+package com.pharmacy.PharmacyManager.Cart;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
