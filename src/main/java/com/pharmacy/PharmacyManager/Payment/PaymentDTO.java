@@ -26,4 +26,6 @@ public class PaymentDTO {
 
     private BigDecimal totalPrice;
 
+    private List<optionsPayment>optionsPayments;
+
 }
