@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class LoginModel extends Human {
+public class LoginModel {
 
 
     @Id
@@ -15,7 +15,6 @@ public class LoginModel extends Human {
     private String password;
 
     public LoginModel(String name, String surname, String email, String password, Long id) {
-        super(name, surname);
         this.email = email;
         this.password = password;
     }
