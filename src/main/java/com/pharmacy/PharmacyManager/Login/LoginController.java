@@ -1,5 +1,7 @@
 package com.pharmacy.PharmacyManager.Login;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 public class LoginController {
         private final LoginService loginService;
 
@@ -23,5 +25,11 @@ public class LoginController {
 
             // If authentication is successful, you can return a response or perform further actions
             System.out.println("Login successful for user: " + loginDTO.getEmail());
+        }
+
+        @GetMapping("/login")
+        public LoginPage loginPage() {
+            // Return the login page view
+            return "/login";
         }
 }
