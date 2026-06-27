@@ -1,4 +1,4 @@
-package com.pharmacy.PharmacyManager.Employer;
+package com.pharmacy.PharmacyManager.Employee;
 
-public class EmployerController {
+public class EmployeeController {
 }

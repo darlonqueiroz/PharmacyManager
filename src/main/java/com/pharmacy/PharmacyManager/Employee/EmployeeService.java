@@ -1,13 +1,13 @@
-package com.pharmacy.PharmacyManager.Employer;
+package com.pharmacy.PharmacyManager.Employee;
 
-public class EmployerService {
-    private final EmployerRepository  employerRepository;
+public class EmployeeService {
+    private final EmployeeRepository employeeRepository;
 
-    public EmployerService (EmployerRepository employerRepository) {
-        this.employerRepository = employerRepository;
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
-    public void saveUser(EmployerModel employer){
-        employerRepository.saveAndFlush(employer);
+    public void saveUser(EmployeeModel employer){
+        employeeRepository.saveAndFlush(employer);
     }
 }

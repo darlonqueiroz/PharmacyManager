@@ -1,11 +1,11 @@
-package com.pharmacy.PharmacyManager.Employer;
+package com.pharmacy.PharmacyManager.Employee;
 
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_employer")
-public class EmployerModel {
+public class EmployeeModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long UUID;
@@ -23,7 +23,7 @@ public class EmployerModel {
         this.UUID = UUID;
     }
 
-    public EmployerModel(Long uuid, String name, String surname, String email, String password) {
+    public EmployeeModel(Long uuid, String name, String surname, String email, String password) {
         this.UUID = uuid;
         this.name = name;
         this.surname = surname;
