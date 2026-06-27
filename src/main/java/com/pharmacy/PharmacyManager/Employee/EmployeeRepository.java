@@ -1,7 +1,7 @@
-package com.pharmacy.PharmacyManager.Employer;
+package com.pharmacy.PharmacyManager.Employee;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EmployerRepository extends JpaRepository <EmployerModel, Long> {
-     EmployerModel findByEmail(String email);
+public interface EmployeeRepository extends JpaRepository <EmployeeModel, Long> {
+     EmployeeModel findByEmail(String email);
 }
