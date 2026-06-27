@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Entity
 @Table (name = "tb_login")
 public class LoginModel {
@@ -12,21 +14,21 @@ public class LoginModel {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+    private Long UUID;
     private String email;
     private String password;
 
-    public LoginModel(String name, String surname, String email, String password, Long id) {
+    public LoginModel(String name, String surname, String email, String password, Long UUID) {
         this.email = email;
         this.password = password;
     }
 
     public Long getId() {
-        return id;
+        return UUID;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.UUID= id;
     }
     public String getEmail() {
         return email;

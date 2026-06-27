@@ -7,9 +7,5 @@ public class LoginService {
         this.loginRepository = loginRepository;
     }
 
-    public boolean authenticate(String username, String password) {
-        // Implement authentication logic here
-        // For example, you can check the username and password against the database
-        return loginRepository.existsByUsernameAndPassword(username, password);
-    }}{
+
 }
