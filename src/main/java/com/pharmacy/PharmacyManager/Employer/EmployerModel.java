@@ -1,12 +1,30 @@
 package com.pharmacy.PharmacyManager.Employer;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "tb_employer")
 public class EmployerModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long UUID;
+    @Column(name = "name", nullable = false)
     private String name;
     private String surname;
     private String email;
     private String password;
 
-    public EmployerModel(String name, String surname, String email, String password) {
+    public Long getUUID() {
+        return UUID;
+    }
+
+    public void setUUID(Long UUID) {
+        this.UUID = UUID;
+    }
+
+    public EmployerModel(Long uuid, String name, String surname, String email, String password) {
+        this.UUID = uuid;
         this.name = name;
         this.surname = surname;
         this.email = email;

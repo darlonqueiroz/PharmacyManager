@@ -3,8 +3,10 @@ package com.pharmacy.PharmacyManager.Login;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table (name = "tb_login")
 public class LoginModel {
 
 
