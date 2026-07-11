@@ -7,10 +7,12 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
+import javax.sql.DataSource;
+
 @Configuration
 public class DataConfiguration {
     @Bean
-    public Datasource dataSource() {
+    public DataSource dataSource() {
         // Configure and return the DataSource
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");

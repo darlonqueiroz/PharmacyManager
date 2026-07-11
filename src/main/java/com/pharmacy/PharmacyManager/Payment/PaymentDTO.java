@@ -19,13 +19,14 @@ import java.util.List;
 @AllArgsConstructor
 public class PaymentDTO {
 
-
+    @Column (name = "client")
     private ClientModel client;
-
+    @Column (name = "product")
     private List<ProductModel> product;
-
+    @Column (name = "total_price")
     private BigDecimal totalPrice;
 
-    private List<optionsPayment>optionsPayments;
+    @OneToOne
+    private List<OptionsPayment>optionsPayments;
 
 }

@@ -28,7 +28,7 @@ public class LoginController {
         }
 
         @GetMapping("/login")
-        public LoginPage loginPage() {
+        public String loginPage() {
             // Return the login page view
             return "/login";
         }

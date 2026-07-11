@@ -1,8 +1,8 @@
 package com.pharmacy.PharmacyManager.Payment;
 
-public record OptionsPayment() {
+public enum OptionsPayment {
 
-    DEBIT
-    CREDIT
+    DEBIT,
+    CREDIT,
     PIX
 }

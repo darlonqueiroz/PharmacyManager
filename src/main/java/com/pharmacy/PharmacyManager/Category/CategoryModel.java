@@ -20,6 +20,6 @@ public class CategoryModel {
    private String name ;
    @Column(name = "recipe")
    private boolean recipe;
-   @OneToMany(mappedBy = "category")
+   @OneToOne(mappedBy = "category")
    private ProductModel product;
 }

@@ -2,3 +2,6 @@
 -- exemplifying the use of a timestamp that automatically updates whenever a record is modified.
 --ALTER TABLE users
 --ADD COLUMN last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+CREATE DATABASE IF NOT EXISTS pharmacy_db;
+USE pharmacy_db;

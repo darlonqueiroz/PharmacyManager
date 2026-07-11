@@ -16,11 +16,10 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/getcategory")
-   public Iterator<CategoryModel> GetAllCategory(){
-
-        return categoryService.getAllCategories();
-    }
+   // @GetMapping("/getcategory")
+   // public Iterator<CategoryModel> getAllCategory(){
+   //     return categoryService.getAllCategories().iterator();
+   // }
     @PostMapping("/postcategory")
     public String PostCategory(){
         return "<h1>Category with Post</h1><img src='https://icons8.com.br/icon/5OD485koNIrb/java'/><br/><h3>Bem vindos ao mundo do Backend</h3>";

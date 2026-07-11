@@ -1,5 +1,6 @@
 package com.pharmacy.PharmacyManager.Client;
 
+import com.pharmacy.PharmacyManager.Adress.AddressModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClientModel {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "cpf", unique = true)
@@ -20,8 +21,9 @@ public class ClientModel {
     private String name;
     @Column(name = "email", unique = true)
     private String email;
-    @Column(name = "adress")
-    private String adress;
+    @JoinColumn (name = "adress_id")
+    @OneToOne (cascade = CascadeType.ALL)
+    private AddressModel adress;
     @Column(name = "phone")
     private String phone;
 

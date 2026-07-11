@@ -17,7 +17,7 @@ import java.util.List;
 public class ProductModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name ="code_product")
     private String codeProduct;

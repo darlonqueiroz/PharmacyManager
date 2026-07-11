@@ -16,12 +16,50 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PaymentModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long UUID;
     @OneToOne
     private ClientModel client;
     @OneToMany
     private List<ProductModel> product;
     @Column (name = "total_price")
     private BigDecimal totalPrice;
+
+
+    public Long getUUID() {
+        return UUID;
+    }
+
+    public void setUUID(Long UUID) {
+        this.UUID = UUID;
+    }
+
+    public BigDecimal getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(BigDecimal totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public List<ProductModel> getProduct() {
+        return product;
+    }
+
+    public void setProduct(List<ProductModel> product) {
+        this.product = product;
+    }
+
+    public ClientModel getClient() {
+        return client;
+    }
+
+    public void setClient(ClientModel client) {
+        this.client = client;
+    }
+
 
 
 }
