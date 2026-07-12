@@ -1,5 +1,6 @@
 package com.pharmacy.PharmacyManager.Client;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class ClientController {
     }
 
     @GetMapping("/getclient")
+    @ResponseStatus(HttpStatus.OK)
     public List<ClientModel> GetAllClient(){
         return clientService.getAllClients();
     }
